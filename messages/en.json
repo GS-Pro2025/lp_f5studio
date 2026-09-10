@@ -1,191 +1,166 @@
 {
-"Hero": {
-  "badge": "Technology & Design Agency",
-
-  "titlePre": "We design",
-
-  "titleHighlight": "experiences",
-
-  "titlePost": "that connect brands with people",
-
-  "description": "F5 Studio: Software development, digital marketing, and purposeful design. We transform ambitious visions into digital products that stand the test of time.",
-
-  "ctaPrimary": "Start a Project",
-
-  "ctaSecondary": "View projects",
-
-  "stats": {
-    "projects": {
-      "number": "120+",
-      "label": "Projects delivered"
-    },
-
-    "experience": {
-      "number": "8 years",
-      "label": "Of experience"
-    },
-
-    "satisfaction": {
-      "number": "98%",
-      "label": "Satisfied clients"
-    }
-  },
-
-  "card": {
-    "title": "Q3 Performance",
-
-    "growth": "+34.2%",
-
-    "metrics": {
-      "conversions": "Conversions",
-      "retention": "Retention",
-      "engagement": "Engagement"
-    }
-  },
-
-  "badges": {
-    "uiux": {
-      "title": "UI/UX Design",
-      "status": "Delivered ✓"
-    },
-
-    "brand": {
-      "title": "F5 Studio",
-      "status": "In progress..."
-    }
-  },
-
-  "scroll": "Scroll"
-},
-
-  "About": {
-    "eyebrow": "Who we are",
-    "titlePre": "We turn ideas into",
-    "titleHighlight": "memorable brands",
-    "description": "At F5 Studio we bring together strategic design, high-performance software development, and digital marketing to build visual identities that stand out and digital experiences that turn visitors into loyal customers.",
-    "descriptionSecondary": "Our multidisciplinary team combines technical rigor with aesthetic sensibility — because the best digital products are both functional and beautiful.",
-    "features": [
-      "Data-driven strategy",
-      "User-centered design",
-      "High-quality code",
-      "Measurable results"
+  "Hero": {
+    "kicker": "Technology & design agency",
+    "titleLine1": "IDAS THAT EVOLVE.",
+    "titleLine2": "EXPERIENCES THAT CONNECT.",
+    "description": "We design and develop digital solutions combining technology, creativity, and strategy to take brands and businesses to the next level.",
+    "tags": [
+      "Software development",
+      "Design",
+      "Digital marketing"
     ],
-    "tag": {
-      "label": "Since 2016",
-      "title": "Creating digital impact"
-    },
-    "footerTagline": "Your vision, our mission"
-  }, 
-  
-"Services": {
-  "eyebrow": "Our services",
-  "title": "Complete solutions for the digital world",
-  "description": "An integrated ecosystem of services to take your brand to the next level.",
-  "items": [
-    {
-      "title": "Software & App Development",
-      "desc": "High-performance web and mobile applications, scalable architectures, and robust digital experiences that drive your business forward.",
-      "tags": ["React", "Node.js", "Flutter", "AWS"]
-    },
-    {
-      "title": "Branding & Visual Design",
-      "desc": "Unique, cohesive visual identities that communicate your brand's values and build lasting recognition in the market.",
-      "tags": ["Identity", "Logos", "Brand Guidelines"]
-    },
-    {
-      "title": "UI/UX Design",
-      "desc": "Intuitive, appealing interfaces designed with a user-centered methodology, rapid prototyping, and continuous validation.",
-      "tags": ["Figma", "Prototypes", "User Research"]
-    },
-    {
-      "title": "Digital Marketing & Strategy",
-      "desc": "Data-driven growth strategies, high-impact campaigns, and continuous optimization to maximize your return.",
-      "tags": ["SEO", "SEM", "Strategy", "Analytics"]
-    },
-    {
-      "title": "Photography & Audiovisual Production",
-      "desc": "Professional photography and audiovisual content that brings your brand to life, strengthens your visual identity, and creates content that connects with your audience.",
-      "tags": ["Photography", "Video", "Content Creation"]
-    },
-    {
-      "title": "Social Media Management",
-      "desc": "Strategic management of your social media presence, from content planning and creation to community engagement and performance optimization.",
-      "tags": ["Content", "Community", "Social Media"]
-    },
-    {
-      "title": "Advertising Campaigns",
-      "desc": "High-impact paid media campaigns designed to reach the right audience, generate qualified leads, and maximize your advertising investment.",
-      "tags": ["Meta Ads", "Google Ads", "Paid Media"]
+    "ctaPrimary": "Get started",
+    "ctaSecondary": "View projects",
+    "scroll": "Scroll",
+    "logoAlt": "F5 Studio 3D logo",
+    "stats": {
+      "projects": {
+        "number": "+50",
+        "label": "Completed projects"
+      },
+      "experience": {
+        "number": "+5",
+        "label": "Years of experience"
+      },
+      "satisfaction": {
+        "number": "100%",
+        "label": "Satisfied clients"
+      }
     }
-  ]
-},
+  },
+  "About": {
+    "kicker": "About us",
+    "title": "Transforming ideas into <highlight>memorable brands</highlight>",
+    "since": "Since 2016",
+    "subtitle": "Creating digital impact",
+    "description1": "At F5 Studio, we integrate strategic design, high-performance software development, and digital marketing to build lasting brand identities and digital experiences that convert visitors into loyal clients.",
+    "description2": "Our multidisciplinary team combines technical rigor with aesthetic sensitivity — because the best digital products are both functional and beautiful.",
+    "motto": "Your vision, our mission",
+    "features": {
+      "strategy": "Data-driven strategy",
+      "design": "User-centered design",
+      "code": "High-quality code",
+      "results": "Measurable results"
+    }
+  },
+  "Services": {
+    "eyebrow": "Our services",
+    "title": "Integrated solutions for the digital world",
+    "description": "An integrated ecosystem of services to take your brand to the next level.",
+    "items": {
+      "development": {
+        "title": "Software & app development",
+        "text": "High-performance web and mobile applications, scalable architectures, and robust digital experiences that drive your business forward.",
+        "tagsLabel": "Technologies",
+        "tags": ["React", "Node.js", "Flutter", "AWS"]
+      },
+      "branding": {
+        "title": "Branding & visual design",
+        "text": "Unique, cohesive visual identities that communicate your brand's values and build lasting recognition in the market.",
+        "tagsLabel": "Specialties",
+        "tags": ["Identity", "Logos", "Brand Guidelines"]
+      },
+      "uiux": {
+        "title": "UI/UX design",
+        "text": "Intuitive, engaging interfaces designed with a user-centered methodology, rapid prototyping, and continuous validation.",
+        "tagsLabel": "Specialties",
+        "tags": ["Figma", "Prototypes", "User Research"]
+      },
+      "marketing": {
+        "title": "Digital marketing & strategy",
+        "text": "Data-driven growth strategies, high-impact campaigns, and continuous optimization to maximize your return on investment.",
+        "tagsLabel": "Specialties",
+        "tags": ["SEO", "SEM", "Strategy", "Analytics"]
+      },
+      "production": {
+        "title": "Photo & video production",
+        "text": "Professional photography and audiovisual content that brings your brand to life, strengthens your visual identity, and connects with your audience.",
+        "tagsLabel": "Specialties",
+        "tags": ["Photography", "Video", "Content Creation"]
+      },
+      "social": {
+        "title": "Social media management",
+        "text": "Strategic management of your brand's social media presence, from planning and content creation to community engagement and performance optimization.",
+        "tagsLabel": "Specialties",
+        "tags": ["Content", "Community", "Social Media"]
+      },
+      "ads": {
+        "title": "Advertising campaigns",
+        "text": "High-impact digital advertising campaigns designed to reach the right audience, generate leads, and maximize your ad spend.",
+        "tagsLabel": "Specialties",
+        "tags": ["Meta Ads", "Google Ads", "Paid Media"]
+      }
+    }
+  },
 
-"Portfolio": {
-  "eyebrow": "Portfolio",
-  "titlePre": "Projects that",
-  "titleHighlight": "drive businesses",
-  "viewProject": "View project",
-  "projects": [
-    {
-      "name": "Globin",
-      "category": "UI/UX · Development",
-      "desc": "Personal finance and expense management app with real-time analysis.",
-      "img": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop&auto=format",
-      "tag": "Fintech",
-      "large": true
+ "Projects": {
+    "eyebrow": "Our projects",
+    "description": "We explore some of the projects where we've turned ideas, needs, and challenges into digital experiences.",
+    "cta": "View project",
+    "prev": "Previous project",
+    "next": "Next project"
+  },
+  "WhoWeAre": {
+    "eyebrow": "F5 Studio",
+    "titlePre": "Who",
+    "titleHighlight": "we are",
+    "reasonsTitlePre": "Why work with",
+    "reasonsTitleHighlight": "F5 Studio",
+    "blocks": {
+      "about": {
+        "title": "Who we are",
+        "text": "F5 Studio is a creative and technology studio that combines design, strategy, and development to turn ideas into functional, engaging, and memorable digital experiences."
+      },
+      "mission": {
+        "title": "Mission",
+        "text": "To create digital solutions that connect creativity, technology, and strategy to help brands grow, communicate better, and deliver relevant experiences for their users."
+      },
+      "vision": {
+        "title": "Vision",
+        "text": "To become a leading studio in creativity and technology, developing innovative digital solutions that help brands evolve and stay relevant in an ever-changing digital environment."
+      }
     },
-    {
-      "name": "Moving Wise",
-      "category": "UI/UX · SaaS",
-      "desc": "SaaS logistics management platform with a sophisticated user interface.",
-      "img": "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?w=800&h=600&fit=crop&auto=format",
-      "tag": "Logistics",
-      "large": false
-    },
-    {
-      "name": "GS Pro Master",
-      "category": "Branding · Web",
-      "desc": "Complete visual identity and high-impact web development.",
-      "img": "https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=800&h=600&fit=crop&auto=format",
-      "tag": "Branding",
-      "large": false
+    "reasons": {
+      "strategy": "Strategy before improvisation",
+      "peopleFirst": "Design built around people",
+      "technology": "Functional, scalable technology",
+      "creativity": "Creativity applied to results",
+      "communication": "Clear, close communication",
+      "custom": "Solutions tailored to every project"
     }
-  ]
-},
-"Contact": {
-  "eyebrow": "Contact",
-  "title": "Let's make your next project a success",
-  "description": "Tell us about your idea. Our team will get back to you within 24 hours with a personalized proposal.",
-  "emails": {
-    "generalLabel": "General email",
-    "projectsLabel": "Projects"
   },
-  "form": {
-    "title": "Tell us about your project",
-    "nameLabel": "Full name",
-    "namePlaceholder": "Maria Garcia",
-    "emailLabel": "Email address",
-    "emailPlaceholder": "maria@company.com",
-    "projectLabel": "Project details",
-    "projectPlaceholder": "Tell us about your project, goals, and estimated timeline...",
-    "submit": "Send message"
-  },
-  "success": {
-    "title": "Message sent!",
-    "description": "We'll get in touch with you within 24 hours.",
-    "button": "Send another message"
-  },
-  "footer": {
-    "links": {
-      "home": "Home",
-      "about": "About us",
-      "services": "Services",
-      "portfolio": "Projects",
-      "contact": "Contact"
+
+  "Contact": {
+    "titlePre": "Let's make your next project a",
+    "titleHighlight": "success",
+    "description": "Tell us your idea. Our team will get back to you within 24 hours with a tailored proposal.",
+    "channels": { "general": "General email", "projects": "Projects" },
+    "formTitle": "Tell us about your project",
+    "fields": {
+      "name": "Full name",
+      "email": "Email address",
+      "details": "Project details",
+      "phone": "WhatsApp number"
     },
-    "rights": "All rights reserved.",
-    "tagline": "Design & Development with purpose."
+    "placeholders": {
+      "name": "e.g. Maria Garcia",
+      "email": "e.g. maria@company.com",
+      "details": "Tell us about your project, goals, and estimated timeline...",
+      "phone": "300 123 4567"
+    },
+    "countrySelectLabel": "Country code",
+    "submit": "Send message",
+    "successTitle": "Thanks for reaching out.",
+    "successText": "Our team will be in touch with you shortly.",
+    "errors": {
+      "name": "Enter your full name",
+      "email": "Enter a valid email",
+      "details": "Tell us a bit more about your project",
+      "phone": "Enter your phone number",
+      "notConfigured": "Email sending isn't enabled yet. In the meantime, reach us at hola@f5studio.com.",
+      "generic": "We couldn't send your message. Try again or email us at hola@f5studio.com.",
+      "unexpected": "An unexpected error occurred. Email us at hola@f5studio.com."
+    }
   }
-}
 
 }

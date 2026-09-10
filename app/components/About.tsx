@@ -1,198 +1,88 @@
 "use client";
 
-import Image from "next/image";
+import { BarChart3, Users, Code2, Target } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Reveal } from "./Reveal";
 
-function IconCheck() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M20 6L9 17l-5-5" />
-    </svg>
-  );
-}
-
-export default function AboutSection() {
+export function About() {
   const t = useTranslations("About");
-  const features = t.raw("features") as string[];
+
+  const features = [
+    { icon: BarChart3, title: t("features.strategy") },
+    { icon: Users, title: t("features.design") },
+    { icon: Code2, title: t("features.code") },
+    { icon: Target, title: t("features.results") },
+  ];
 
   return (
-    <section
-      id="about"
-      className="bg-[#F5F5F7] py-28 overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+    <section id="nosotros" className="relative overflow-hidden py-24 sm:py-32 bg-[#121212]">
+      {/* Glow ambiental */}
+      <div
+        className="pointer-events-none absolute top-1/3 -left-40 h-96 w-96 rounded-full bg-[#6F42C1]/15 blur-[130px]"
+        aria-hidden
+      />
 
-          {/* =========================
-              IMAGES GRID
-          ========================== */}
-          <div className="relative grid grid-cols-2 gap-4">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <Reveal>
+          <p className="text-[0.68rem] font-bold tracking-[0.35em] text-[#6F42C1] uppercase">
+            {t("kicker")}
+          </p>
+          <h2 className="mt-5 max-w-4xl font-display text-4xl leading-[0.95] font-extrabold tracking-[-0.03em] uppercase text-[#F5F5F7] sm:text-6xl lg:text-7xl">
+            {t.rich("title", {
+              highlight: (chunks) => (
+                <span className="text-[#6F42C1]">{chunks}</span>
+              ),
+            })}
+          </h2>
+        </Reveal>
 
-            {/* Columna izquierda */}
-            <div className="space-y-4">
-              <div className="rounded-2xl overflow-hidden h-56 bg-[#e0e0e2]">
-                <Image
-                  src="https://images.unsplash.com/photo-1603201667141-5a2d4c673378?w=480&h=360&fit=crop&auto=format"
-                  alt={t("titlePre")}
-                  width={480}
-                  height={360}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="rounded-2xl overflow-hidden h-36 bg-[#e0e0e2]">
-                <Image
-                  src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?w=480&h=280&fit=crop&auto=format"
-                  alt={t("eyebrow")}
-                  width={480}
-                  height={280}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Columna derecha */}
-            <div className="space-y-4 mt-10">
-              <div className="rounded-2xl overflow-hidden h-36 bg-[#e0e0e2]">
-                <Image
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=480&h=280&fit=crop&auto=format"
-                  alt={t("titleHighlight")}
-                  width={480}
-                  height={280}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="rounded-2xl overflow-hidden h-56 bg-[#e0e0e2]">
-                <Image
-                  src="https://images.unsplash.com/photo-1603201667230-bd139210db18?w=480&h=360&fit=crop&auto=format"
-                  alt={t("titlePre")}
-                  width={480}
-                  height={360}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* =========================
-                ACCENT TAG
-            ========================== */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#6F42C1] text-[#F5F5F7] rounded-2xl px-5 py-3 shadow-lg z-10">
-              <p
-                className="text-xs text-center font-normal"
-                style={{ fontFamily: "Aileron, sans-serif" }}
-              >
-                {t("tag.label")}
-              </p>
-
-              <p
-                className="text-sm text-center font-bold"
-                style={{ fontFamily: "Aileron, sans-serif" }}
-              >
-                {t("tag.title")}
-              </p>
-            </div>
-          </div>
-
-          {/* =========================
-              TEXT CONTENT
-          ========================== */}
-          <div className="flex flex-col gap-7">
-
-            {/* Label */}
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-px bg-[#6F42C1]" />
-
-              <span
-                className="text-xs text-[#6F42C1] tracking-[0.2em] uppercase font-semibold"
-                style={{ fontFamily: "Aileron, sans-serif" }}
-              >
-                {t("eyebrow")}
-              </span>
-            </div>
-
-            {/* Title */}
-            <h2
-              className="text-[clamp(2rem,4vw,3.2rem)] text-[#1E1E1E] leading-[1.08] tracking-[-0.02em] font-black"
-              style={{ fontFamily: "Aileron, sans-serif" }}
-            >
-              {t("titlePre")}{" "}
-              <span className="text-[#6F42C1] font-semibold">
-                {t("titleHighlight")}
-              </span>
-            </h2>
-
-            {/* Description */}
-            <p
-              className="text-[#1E1E1E]/60 text-lg leading-relaxed font-semibold"
-              style={{ fontFamily: "Aileron, sans-serif" }}
-            >
-              {t("description")}
+        <div className="mt-14 grid gap-12 lg:grid-cols-[1.1fr_1fr]">
+          <Reveal delay={80}>
+            <span className="inline-flex rounded-full border border-[#6F42C1]/40 px-4 py-1.5 text-[0.62rem] font-bold tracking-[0.3em] text-[#6F42C1] uppercase">
+              {t("since")}
+            </span>
+            <h3 className="mt-6 font-display text-2xl font-extrabold tracking-tight uppercase text-[#F5F5F7] sm:text-3xl">
+              {t("subtitle")}
+            </h3>
+            <p className="mt-6 text-base leading-relaxed text-[#F5F5F7]/70 font-light">
+              {t("description1")}
             </p>
-
-            {/* Secondary description */}
-            <p
-              className="text-[#1E1E1E]/55 leading-relaxed font-semibold"
-              style={{ fontFamily: "Aileron, sans-serif" }}
-            >
-              {t("descriptionSecondary")}
+            <p className="mt-4 text-base leading-relaxed text-[#F5F5F7]/70 font-light">
+              {t("description2")}
             </p>
+          </Reveal>
 
-            {/* =========================
-                FEATURES
-            ========================== */}
-            <div className="grid grid-cols-2 gap-4 pt-2">
-              {features.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-2.5"
+          {/* Feature Grid */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            {features.map((f, i) => (
+              <Reveal key={f.title} delay={120 + i * 140} from="right">
+                <article
+                  className="group h-full rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md p-6 transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.08] hover:border-[#6F42C1]/50 hover:shadow-[0_20px_40px_-15px_rgba(111,66,193,0.3)]"
+                  style={{ marginTop: i % 2 === 1 ? "1.5rem" : undefined }}
                 >
-                  <div className="w-5 h-5 rounded-full bg-[#6F42C1]/10 flex items-center justify-center text-[#6F42C1] flex-shrink-0">
-                    <IconCheck />
-                  </div>
-
-                  <span
-                    className="text-sm text-[#1E1E1E]/70 font-semibold"
-                    style={{ fontFamily: "Aileron, sans-serif" }}
-                  >
-                    {item}
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#6F42C1]/15 text-[#6F42C1] transition-colors group-hover:bg-[#6F42C1] group-hover:text-[#F5F5F7]">
+                    <f.icon className="h-5 w-5" />
                   </span>
-                </div>
-              ))}
-            </div>
-
-            {/* =========================
-                BRAND FOOTER
-            ========================== */}
-            <div className="flex items-center gap-4 pt-2">
-              <Image
-                src="/f5LogoHnegro.png"
-                alt="F5 Studio"
-                width={100}
-                height={28}
-                className="h-full w-auto object-contain opacity-80"
-              />
-
-              <div className="w-px h-6 bg-[#1E1E1E]/15" />
-
-              <p
-                className="text-[#1E1E1E]/45 text-sm font-semibold"
-                style={{ fontFamily: "Aileron, sans-serif" }}
-              >
-                {t("footerTagline")}
-              </p>
-            </div>
+                  <h4 className="mt-5 font-display text-sm font-extrabold tracking-[0.15em] uppercase text-[#F5F5F7]">
+                    {f.title}
+                  </h4>
+                </article>
+              </Reveal>
+            ))}
           </div>
         </div>
+
+        {/* Footer Banner */}
+        <Reveal delay={100}>
+          <div className="mt-20 flex flex-col items-center gap-2 border-t border-white/10 pt-12 text-center">
+            <p className="font-display text-3xl font-extrabold tracking-[-0.02em] uppercase text-[#F5F5F7] sm:text-4xl">
+              F5 Studio
+            </p>
+            <p className="text-xs font-bold tracking-[0.35em] text-[#6F42C1] uppercase">
+              {t("motto")}
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,38 +1,29 @@
 {
-  "Hero": {
-    "badge": "Agência de Tecnologia & Design",
-    "titlePre": "Desenhamos",
-    "titleHighlight": "experiências",
-    "titlePost": "que conectam marcas com pessoas",
-    "description": "F5 Studio: Desenvolvimento de software, marketing digital e design com propósito. Transformamos visões ambiciosas em produtos digitais que perduram.",
-    "ctaPrimary": "Iniciar Projeto",
-    "ctaSecondary": "Ver projetos",
-    "stats": {
-      "projects": { "number": "120+", "label": "Projetos entregues" },
-      "experience": { "number": "8 anos", "label": "De experiência" },
-      "satisfaction": { "number": "98%", "label": "Clientes satisfeitos" }
-    },
-    "card": {
-      "title": "Performance Q3",
-      "growth": "+34.2%",
-      "metrics": {
-        "conversions": "Conversões",
-        "retention": "Retenção",
-        "engagement": "Engajamento"
-      }
-    },
-    "badges": {
-      "uiux": {
-        "title": "UI/UX Design",
-        "status": "Entregue ✓"
+"Hero": {
+      "kicker": "Agência de tecnologia & design",
+      "titleLine1": "IDEIAS QUE EVOLUEM.",
+      "titleLine2": "EXPERIÊNCIAS QUE CONECTAM.",
+      "description": "Projetamos e desenvolvemos soluções digitais que combinam tecnologia, criatividade e estratégia para levar marcas e negócios ao próximo nível.",
+      "tags": ["Desenvolvimento de software", "Design", "Marketing digital"],
+      "ctaPrimary": "Comece agora",
+      "ctaSecondary": "Ver projetos",
+      "scroll": "Scroll",
+      "logoAlt": "Logotipo 3D do F5 Studio",
+      "stats": {
+      "projects": {
+        "number": "+50",
+        "label": "Projetos concluídos"
       },
-      "brand": {
-        "title": "F5 Studio",
-        "status": "Em andamento..."
+      "experience": {
+        "number": "+5",
+        "label": "Anos de experiência"
+      },
+      "satisfaction": {
+        "number": "100%",
+        "label": "Clientes satisfeitos"
       }
+    }
     },
-    "scroll": "Scroll"
-  },  
   
   "About": {
     "eyebrow": "Quem somos",

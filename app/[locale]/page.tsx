@@ -1,19 +1,21 @@
 // app/[locale]/page.tsx
 import { Hero } from "../components/Hero";
-import AboutSection from "../components/About";
-import ServicesSection from "../components/Services";
-import PortfolioSection from "../components/Projects";
-import { ContactSection } from "../components/ContactUs";
+import { About } from "../components/About";
+import { Services} from "../components/Services";
+import { Projects } from "../components/Projects";
+import { Contact} from "../components/ContactUs";
+import { WhoWeAre } from "../components/WhoWeAre";
 
 
 export default function Page() {
   return (
     <>
       <Hero />
-      <AboutSection/>
-      <ServicesSection/>
-      <PortfolioSection/>
-      <ContactSection/>
+      <About/>
+      <Projects/>
+      <Services/>
+      <WhoWeAre/>
+      <Contact/>
     </>
   );
 }
