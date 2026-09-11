@@ -1,6 +1,6 @@
 import { createNavigation } from "next-intl/navigation";
 
 export const { Link, redirect, usePathname, useRouter } = createNavigation({
-  locales: ["en", "es", "pt"],
-  defaultLocale: "es",
+  locales: ["en", "es", "pt","fr"],
+  defaultLocale: "en",
 });
