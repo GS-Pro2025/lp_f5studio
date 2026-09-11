@@ -1,4 +1,18 @@
 {
+    "Navbar": {
+    "links": {
+      "home": "Home",
+      "about": "About us",
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "cta": "Start a project",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageLabel": "Language"
+  },
+
   "Hero": {
     "kicker": "Technology & design agency",
     "titleLine1": "IDAS THAT EVOLVE.",

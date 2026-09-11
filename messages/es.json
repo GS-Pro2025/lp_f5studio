@@ -1,4 +1,18 @@
 {
+    "Navbar": {
+    "links": {
+      "home": "Accueil",
+      "about": "À propos",
+      "services": "Services",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "cta": "Démarrer un projet",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "languageLabel": "Langue"
+  },
+
   "Hero": {
     "kicker": "Agencia de tecnología & diseño",
     "titleLine1": "IDEAS QUE EVOLUCIONAN.",
