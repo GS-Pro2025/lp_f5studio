@@ -21,7 +21,7 @@ const aileron = localFont({
 export const metadata: Metadata = {
   title: "F5 Studio Lab LLC",
   description:
-    "F5 Studio es un estudio creativo enfocado en el desarrollo de software, identidades visuales, experiencias digitales y marketing estratégico.",
+    "F5 Studio Lab es un estudio creativo enfocado en el desarrollo de software, identidades visuales, experiencias digitales y marketing estratégico.",
   keywords: [
     "desarrollo de software",
     "marketing digital",
