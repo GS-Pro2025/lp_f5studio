@@ -1,18 +1,17 @@
 {
-    "Navbar": {
+  "Navbar": {
     "links": {
-      "home": "Accueil",
-      "about": "À propos",
-      "services": "Services",
-      "projects": "Projets",
-      "contact": "Contact"
+      "home": "Inicio",
+      "about": "Nosotros",
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "contact": "Contacto"
     },
-    "cta": "Démarrer un projet",
-    "openMenu": "Ouvrir le menu",
-    "closeMenu": "Fermer le menu",
-    "languageLabel": "Langue"
+    "cta": "Iniciar un proyecto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "languageLabel": "Idioma"
   },
-
   "Hero": {
     "kicker": "Agencia de tecnología & diseño",
     "titleLine1": "IDEAS QUE EVOLUCIONAN.",
@@ -57,7 +56,6 @@
       "results": "Resultados medibles"
     }
   },
-
   "Services": {
     "eyebrow": "Nuestros servicios",
     "title": "Soluciones integrales para el mundo digital",
@@ -67,47 +65,76 @@
         "title": "Desarrollo de software & apps",
         "text": "Aplicaciones web y móviles de alto rendimiento, arquitecturas escalables y experiencias digitales robustas que impulsan tu negocio.",
         "tagsLabel": "Tecnologías",
-        "tags": ["React", "Node.js", "Flutter", "AWS"]
+        "tags": [
+          "React",
+          "Node.js",
+          "Flutter",
+          "AWS"
+        ]
       },
       "branding": {
         "title": "Branding & diseño visual",
         "text": "Identidades visuales únicas y coherentes que comunican los valores de tu marca y construyen reconocimiento duradero en el mercado.",
         "tagsLabel": "Especialidades",
-        "tags": ["Identidad", "Logos", "Brand Guidelines"]
+        "tags": [
+          "Identidad",
+          "Logos",
+          "Brand Guidelines"
+        ]
       },
       "uiux": {
         "title": "Diseño UI/UX",
         "text": "Interfaces intuitivas y atractivas diseñadas bajo una metodología centrada en el usuario, con prototipado rápido y validación continua.",
         "tagsLabel": "Especialidades",
-        "tags": ["Figma", "Prototipos", "User Research"]
+        "tags": [
+          "Figma",
+          "Prototipos",
+          "User Research"
+        ]
       },
       "marketing": {
         "title": "Marketing digital & estrategia",
         "text": "Estrategias de crecimiento basadas en datos, campañas de alto impacto y optimización continua para maximizar el retorno de tu inversión.",
         "tagsLabel": "Especialidades",
-        "tags": ["SEO", "SEM", "Estrategia", "Analytics"]
+        "tags": [
+          "SEO",
+          "SEM",
+          "Estrategia",
+          "Analytics"
+        ]
       },
       "production": {
         "title": "Producción fotográfica & audiovisual",
         "text": "Fotografía profesional y contenido audiovisual que da vida a tu marca, fortalece tu identidad visual y crea contenido que conecta con tu audiencia.",
         "tagsLabel": "Especialidades",
-        "tags": ["Fotografía", "Video", "Creación de Contenido"]
+        "tags": [
+          "Fotografía",
+          "Video",
+          "Creación de Contenido"
+        ]
       },
       "social": {
         "title": "Manejo de redes sociales",
         "text": "Gestión estratégica de la presencia de tu marca en redes sociales, desde la planificación y creación de contenido hasta la interacción con tu comunidad y optimización del rendimiento.",
         "tagsLabel": "Especialidades",
-        "tags": ["Contenido", "Comunidad", "Redes Sociales"]
+        "tags": [
+          "Contenido",
+          "Comunidad",
+          "Redes Sociales"
+        ]
       },
       "ads": {
         "title": "Campañas publicitarias",
         "text": "Campañas de publicidad digital de alto impacto diseñadas para llegar a la audiencia correcta, generar clientes potenciales y maximizar tu inversión publicitaria.",
         "tagsLabel": "Especialidades",
-        "tags": ["Meta Ads", "Google Ads", "Paid Media"]
+        "tags": [
+          "Meta Ads",
+          "Google Ads",
+          "Paid Media"
+        ]
       }
     }
   },
-
   "Projects": {
     "eyebrow": "Nuestros proyectos",
     "description": "Exploramos algunos de los proyectos en los que hemos convertido ideas, necesidades y desafíos en experiencias digitales.",
@@ -144,12 +171,14 @@
       "custom": "Soluciones adaptadas a cada proyecto"
     }
   },
-
   "Contact": {
     "titlePre": "Hagamos que tu próximo proyecto sea un",
     "titleHighlight": "éxito",
     "description": "Cuéntanos tu idea. Nuestro equipo te responderá en menos de 24 horas con una propuesta personalizada.",
-    "channels": { "general": "Email general", "projects": "Proyectos" },
+    "channels": {
+      "general": "Email general",
+      "projects": "Proyectos"
+    },
     "formTitle": "Cuéntanos tu proyecto",
     "fields": {
       "name": "Nombre completo",
@@ -177,6 +206,4 @@
       "unexpected": "Ocurrió un error inesperado. Escríbenos a hola@f5studio.com."
     }
   }
-
 }
-

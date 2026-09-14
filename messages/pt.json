@@ -1,17 +1,17 @@
 {
-    "Navbar": {
-    "links": {
-      "home": "Accueil",
-      "about": "À propos",
-      "services": "Services",
-      "projects": "Projets",
-      "contact": "Contact"
-    },
-    "cta": "Démarrer un projet",
-    "openMenu": "Ouvrir le menu",
-    "closeMenu": "Fermer le menu",
-    "languageLabel": "Langue"
+"Navbar": {
+  "links": {
+    "home": "Início",
+    "about": "Sobre nós",
+    "services": "Serviços",
+    "projects": "Projetos",
+    "contact": "Contato"
   },
+  "cta": "Iniciar um projeto",
+  "openMenu": "Abrir menu",
+  "closeMenu": "Fechar menu",
+  "languageLabel": "Idioma"
+},
 
   "Hero": {
     "kicker": "Agência de tecnologia & design",
