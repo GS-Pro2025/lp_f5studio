@@ -46,7 +46,7 @@
     "title": "Transformamos ideas en <highlight>marcas memorables</highlight>",
     "since": "Desde 2016",
     "subtitle": "Creando impacto digital",
-    "description1": "En F5 Studio integramos diseño estratégico, desarrollo de software de alto rendimiento y marketing digital para crear identidades visuales que trascienden y experiencias digitales que convierten visitantes en clientes leales.",
+    "description1": "En F5 Studio Lab integramos diseño estratégico, desarrollo de software de alto rendimiento y marketing digital para crear identidades visuales que trascienden y experiencias digitales que convierten visitantes en clientes leales.",
     "description2": "Nuestro equipo multidisciplinario combina rigor técnico con sensibilidad estética — porque los mejores productos digitales son tanto funcionales como hermosos.",
     "motto": "Tu visión, nuestra misión",
     "features": {
@@ -143,15 +143,15 @@
     "next": "Proyecto siguiente"
   },
   "WhoWeAre": {
-    "eyebrow": "F5 Studio",
+    "eyebrow": "F5 Studio Lab LLC",
     "titlePre": "Quiénes",
     "titleHighlight": "somos",
     "reasonsTitlePre": "¿Por qué trabajar con",
-    "reasonsTitleHighlight": "F5 Studio",
+    "reasonsTitleHighlight": "F5 Studio Lab LLC",
     "blocks": {
       "about": {
         "title": "Quiénes somos",
-        "text": "F5 Studio es un estudio creativo y tecnológico que combina diseño, estrategia y desarrollo para transformar ideas en experiencias digitales funcionales, atractivas y memorables."
+        "text": "F5 Studio Lab es un estudio creativo y tecnológico que combina diseño, estrategia y desarrollo para transformar ideas en experiencias digitales funcionales, atractivas y memorables."
       },
       "mission": {
         "title": "Misión",
@@ -205,5 +205,20 @@
       "generic": "No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos a hola@f5studio.com.",
       "unexpected": "Ocurrió un error inesperado. Escríbenos a hola@f5studio.com."
     }
+  },
+  "Footer": {
+  "tagline": "Tecnología que funciona. Diseño que conecta.",
+  "navAriaLabel": "Pie de página",
+  "navTitle": "Navegación",
+  "contactTitle": "Contacto",
+  "cta": "Comienza ya",
+  "rights": "Todos los derechos reservados.",
+  "links": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "contact": "Contacto"
   }
+}
 }

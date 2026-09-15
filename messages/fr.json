@@ -46,7 +46,7 @@
     "title": "Transformer des idées en <highlight>marques mémorables</highlight>",
     "since": "Depuis 2016",
     "subtitle": "Créer un impact numérique",
-    "description1": "Chez F5 Studio, nous associons design stratégique, développement logiciel haute performance et marketing digital pour construire des identités de marque durables et des expériences numériques qui transforment les visiteurs en clients fidèles.",
+    "description1": "Chez F5 Studio Lab, nous associons design stratégique, développement logiciel haute performance et marketing digital pour construire des identités de marque durables et des expériences numériques qui transforment les visiteurs en clients fidèles.",
     "description2": "Notre équipe pluridisciplinaire allie rigueur technique et sensibilité esthétique — car les meilleurs produits numériques sont à la fois fonctionnels et beaux.",
     "motto": "Votre vision, notre mission",
     "features": {
@@ -114,15 +114,15 @@
     "next": "Projet suivant"
   },
   "WhoWeAre": {
-    "eyebrow": "F5 Studio",
+    "eyebrow": "F5 Studio Lab LLC",
     "titlePre": "Qui",
     "titleHighlight": "sommes-nous",
     "reasonsTitlePre": "Pourquoi travailler avec",
-    "reasonsTitleHighlight": "F5 Studio",
+    "reasonsTitleHighlight": "F5 Studio Lab LLC",
     "blocks": {
       "about": {
         "title": "Qui sommes-nous",
-        "text": "F5 Studio est un studio créatif et technologique qui allie design, stratégie et développement pour transformer des idées en expériences numériques fonctionnelles, engageantes et mémorables."
+        "text": "F5 Studio Lab est un studio créatif et technologique qui allie design, stratégie et développement pour transformer des idées en expériences numériques fonctionnelles, engageantes et mémorables."
       },
       "mission": {
         "title": "Mission",
@@ -174,5 +174,20 @@
       "generic": "Nous n'avons pas pu envoyer votre message. Réessayez ou écrivez-nous à hola@f5studio.com.",
       "unexpected": "Une erreur inattendue s'est produite. Écrivez-nous à hola@f5studio.com."
     }
+  },
+  "Footer": {
+  "tagline": "Une technologie qui fonctionne. Un design qui connecte.",
+  "navAriaLabel": "Pied de page",
+  "navTitle": "Navigation",
+  "contactTitle": "Contact",
+  "cta": "Commencer",
+  "rights": "Tous droits réservés.",
+  "links": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "projects": "Projets",
+    "contact": "Contact"
   }
+}
 }

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "branding",
     "diseño web",
     "UI/UX",
-    "F5 Studio",
+    "F5 Studio Lab",
     "agencia tecnológica",
   ],
 };

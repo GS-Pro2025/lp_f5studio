@@ -47,7 +47,7 @@
     "title": "Transformando ideias em <highlight>marcas memoráveis</highlight>",
     "since": "Desde 2016",
     "subtitle": "Criando impacto digital",
-    "description1": "Na F5 Studio, integramos design estratégico, desenvolvimento de software de alta performance e marketing digital para construir identidades de marca duradouras e experiências digitais que transformam visitantes em clientes fiéis.",
+    "description1": "Na F5 Studio Lab, integramos design estratégico, desenvolvimento de software de alta performance e marketing digital para construir identidades de marca duradouras e experiências digitais que transformam visitantes em clientes fiéis.",
     "description2": "Nossa equipe multidisciplinar combina rigor técnico com sensibilidade estética — porque os melhores produtos digitais são funcionais e bonitos.",
     "motto": "Sua visão, nossa missão",
     "features": {
@@ -114,15 +114,15 @@
     "next": "Próximo projeto"
   },
   "WhoWeAre": {
-    "eyebrow": "F5 Studio",
+    "eyebrow": "F5 Studio Lab LLC",
     "titlePre": "Quem",
     "titleHighlight": "somos",
     "reasonsTitlePre": "Por que trabalhar com a",
-    "reasonsTitleHighlight": "F5 Studio",
+    "reasonsTitleHighlight": "F5 Studio Lab LLC",
     "blocks": {
       "about": {
         "title": "Quem somos",
-        "text": "A F5 Studio é um estúdio criativo e de tecnologia que combina design, estratégia e desenvolvimento para transformar ideias em experiências digitais funcionais, envolventes e memoráveis."
+        "text": "A F5 Studio Lab é um estúdio criativo e de tecnologia que combina design, estratégia e desenvolvimento para transformar ideias em experiências digitais funcionais, envolventes e memoráveis."
       },
       "mission": {
         "title": "Missão",
@@ -176,5 +176,20 @@
       "generic": "Não foi possível enviar sua mensagem. Tente novamente ou envie um e-mail para hola@f5studio.com.",
       "unexpected": "Ocorreu um erro inesperado. Envie um e-mail para hola@f5studio.com."
     }
+  },
+  "Footer": {
+  "tagline": "Tecnologia que funciona. Design que conecta.",
+  "navAriaLabel": "Rodapé",
+  "navTitle": "Navegação",
+  "contactTitle": "Contato",
+  "cta": "Comece já",
+  "rights": "Todos os direitos reservados.",
+  "links": {
+    "home": "Início",
+    "about": "Sobre nós",
+    "services": "Serviços",
+    "projects": "Projetos",
+    "contact": "Contato"
   }
+}
 }

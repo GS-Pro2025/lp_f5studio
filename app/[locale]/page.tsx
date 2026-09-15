@@ -5,6 +5,7 @@ import { Services} from "../components/Services";
 import { Projects } from "../components/Projects";
 import { Contact} from "../components/ContactUs";
 import { WhoWeAre } from "../components/WhoWeAre";
+import { Footer } from "../components/Footer";
 
 
 export default function Page() {
@@ -16,6 +17,7 @@ export default function Page() {
       <Services/>
       <WhoWeAre/>
       <Contact/>
+      <Footer/>
     </>
   );
 }

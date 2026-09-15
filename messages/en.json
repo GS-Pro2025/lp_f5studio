@@ -47,7 +47,7 @@
     "title": "Transforming ideas into <highlight>memorable brands</highlight>",
     "since": "Since 2016",
     "subtitle": "Creating digital impact",
-    "description1": "At F5 Studio, we integrate strategic design, high-performance software development, and digital marketing to build lasting brand identities and digital experiences that convert visitors into loyal clients.",
+    "description1": "At F5 Studio Lab, we integrate strategic design, high-performance software development, and digital marketing to build lasting brand identities and digital experiences that convert visitors into loyal clients.",
     "description2": "Our multidisciplinary team combines technical rigor with aesthetic sensitivity — because the best digital products are both functional and beautiful.",
     "motto": "Your vision, our mission",
     "features": {
@@ -115,15 +115,15 @@
     "next": "Next project"
   },
   "WhoWeAre": {
-    "eyebrow": "F5 Studio",
+    "eyebrow": "F5 Studio Lab LLC",
     "titlePre": "Who",
     "titleHighlight": "we are",
     "reasonsTitlePre": "Why work with",
-    "reasonsTitleHighlight": "F5 Studio",
+    "reasonsTitleHighlight": "F5 Studio Lab LLC",
     "blocks": {
       "about": {
         "title": "Who we are",
-        "text": "F5 Studio is a creative and technology studio that combines design, strategy, and development to turn ideas into functional, engaging, and memorable digital experiences."
+        "text": "F5 Studio Lab LLC is a creative and technology studio that combines design, strategy, and development to turn ideas into functional, engaging, and memorable digital experiences."
       },
       "mission": {
         "title": "Mission",
@@ -175,6 +175,21 @@
       "generic": "We couldn't send your message. Try again or email us at hola@f5studio.com.",
       "unexpected": "An unexpected error occurred. Email us at hola@f5studio.com."
     }
+  },
+  "Footer": {
+  "tagline": "Technology that works. Design that connects.",
+  "navAriaLabel": "Footer",
+  "navTitle": "Navigation",
+  "contactTitle": "Contact",
+  "cta": "Get Started",
+  "rights": "All rights reserved.",
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
   }
+}
 
 }

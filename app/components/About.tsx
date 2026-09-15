@@ -81,7 +81,7 @@ export function About() {
         <Reveal delay={100}>
           <div className="mt-16 sm:mt-20 flex flex-col items-center gap-2 border-t border-white/10 pt-10 sm:pt-12 text-center">
             <p className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-[-0.01em] sm:tracking-[-0.02em] uppercase text-[#F5F5F7]">
-              F5 Studio
+              F5 Studio Lab LLC
             </p>
             <p className="text-[11px] sm:text-xs font-bold tracking-[0.3em] sm:tracking-[0.35em] text-[#6F42C1] uppercase">
               {t("motto")}
