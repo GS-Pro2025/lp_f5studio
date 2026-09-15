@@ -4,7 +4,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ArrowRight, Loader2, Mail, CheckCircle2 } from "lucide-react";
-import { submitContact } from "@/app/actions/contact";
+import emailjs from "@emailjs/browser";
 import { contactSchema } from "../lib/contact-schema";
 import { useCountries } from "../hooks/use-countries";
 import { Reveal } from "./Reveal";
@@ -74,22 +74,31 @@ export function Contact() {
 
     setErrors({});
     setStatus("loading");
+
     try {
-      const result = await submitContact(parsed.data);
-      if (result.ok) {
-        setStatus("success");
-      } else {
-        setStatus("error");
-        setFormError(
-          result.reason === "email_not_configured"
-            ? t("errors.notConfigured")
-            : t("errors.generic"),
-        );
-      }
-    } catch {
-      setStatus("error");
-      setFormError(t("errors.unexpected"));
-    }
+      // Parámetros que se enviarán a la plantilla de EmailJS
+      const templateParams = {
+        name: parsed.data.name,
+        email: parsed.data.email,
+        details: parsed.data.details,
+        phone: `${parsed.data.dialCode} ${parsed.data.phone}`,
+        country: parsed.data.country,
+      };
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      setStatus("success");
+    } catch (error: any) {
+  // Imprime la propiedad .text o .message de EmailJS
+  console.error("EmailJS Error detallado:", error?.text || error?.message || error);
+  setStatus("error");
+  setFormError(t("errors.unexpected"));
+}
   }
 
   return (
@@ -165,7 +174,7 @@ export function Contact() {
                     aria-hidden
                   />
                   <Image
-                    src="/f5-logo.png"
+                    src="/f5LogosinfB.png"
                     alt=""
                     width={72}
                     height={72}
