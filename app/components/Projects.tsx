@@ -2,33 +2,152 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "../lib/utils";
 import { Reveal } from "./Reveal";
 
-const projects = [
+// Debe coincidir con "locales" en tu routing.ts
+type LocaleImages = {
+  en: string;
+  es: string;
+  pt: string;
+  fr: string;
+};
+
+// El fondo del slider necesita una versión por idioma Y por tamaño de pantalla
+// (el recorte/composición cambia entre mobile y desktop)
+type ResponsiveBg = {
+  mobile: LocaleImages;
+  desktop: LocaleImages;
+};
+
+type Project = {
+  key: string;
+  name: string;
+  category: string;
+  // Imagen grande de fondo del slider (mobile/desktop, cada una por idioma)
+  bg: ResponsiveBg;
+  // Imagen de la miniatura/card de la tira inferior (una por idioma, independiente del fondo)
+  card: LocaleImages;
+};
+
+// Si un idioma no tiene imagen todavía, se usa esta como respaldo
+const FALLBACK_LOCALE: keyof LocaleImages = "es";
+
+// Ajusta estas rutas a donde realmente pusiste tus imágenes en /public
+const projects: Project[] = [
   {
+    key: "globin",
     name: "Globin",
     category: "UI/UX · Desarrollo",
-    image: "/slider1.png",
+    bg: {
+      mobile: {
+        en: "/projects/globin/bg-mobile-en.jpg",
+        es: "/projects/globin/bg-mobile-es.jpg",
+        pt: "/projects/globin/bg-mobile-pt.jpg",
+        fr: "/projects/globin/bg-mobile-fr.jpg",
+      },
+      desktop: {
+        en: "/projects/globin/bg-desktop-en.jpg",
+        es: "/projects/globin/bg-desktop-es.jpg",
+        pt: "/projects/globin/bg-desktop-pt.jpg",
+        fr: "/projects/globin/bg-desktop-fr.jpg",
+      },
+    },
+    card: {
+      en: "/projects/globin/card-en.jpg",
+      es: "/projects/globin/card-es.jpg",
+      pt: "/projects/globin/card-pt.jpg",
+      fr: "/projects/globin/card-fr.jpg",
+    },
   },
   {
+    key: "movingwise",
     name: "Moving Wise",
     category: "UI/UX · SaaS",
-    image: "/slider1.png",
+    bg: {
+      mobile: {
+        en: "/projects/movingwise/bg-mobile-en.jpg",
+        es: "/projects/movingwise/bg-mobile-es.jpg",
+        pt: "/projects/movingwise/bg-mobile-pt.jpg",
+        fr: "/projects/movingwise/bg-mobile-fr.jpg",
+      },
+      desktop: {
+        en: "/projects/movingwise/bg-desktop-en.jpg",
+        es: "/projects/movingwise/bg-desktop-es.jpg",
+        pt: "/projects/movingwise/bg-desktop-pt.jpg",
+        fr: "/projects/movingwise/bg-desktop-fr.jpg",
+      },
+    },
+    card: {
+      en: "/projects/movingwise/card-en.jpg",
+      es: "/projects/movingwise/card-es.jpg",
+      pt: "/projects/movingwise/card-pt.jpg",
+      fr: "/projects/movingwise/card-fr.jpg",
+    },
   },
   {
+    key: "gspromaster",
     name: "GS Pro Master",
     category: "Branding · Web",
-    image: "/slider1.png",
+    bg: {
+      mobile: {
+        en: "/projects/gspromaster/bg-mobile-en.jpg",
+        es: "/projects/gspromaster/bg-mobile-es.jpg",
+        pt: "/projects/gspromaster/bg-mobile-pt.jpg",
+        fr: "/projects/gspromaster/bg-mobile-fr.jpg",
+      },
+      desktop: {
+        en: "/projects/gspromaster/bg-desktop-en.jpg",
+        es: "/projects/gspromaster/bg-desktop-es.jpg",
+        pt: "/projects/gspromaster/bg-desktop-pt.jpg",
+        fr: "/projects/gspromaster/bg-desktop-fr.jpg",
+      },
+    },
+    card: {
+      en: "/projects/gspromaster/card-en.jpg",
+      es: "/projects/gspromaster/card-es.jpg",
+      pt: "/projects/gspromaster/card-pt.jpg",
+      fr: "/projects/gspromaster/card-fr.jpg",
+    },
+  },
+  {
+    key: "27th",
+    name: "27th",
+    category: "Branding · Web",
+    bg: {
+      mobile: {
+        en: "/projects/27th/bg-mobile-en.jpg",
+        es: "/projects/27th/bg-mobile-es.jpg",
+        pt: "/projects/27th/bg-mobile-pt.jpg",
+        fr: "/projects/27th/bg-mobile-fr.jpg",
+      },
+      desktop: {
+        en: "/projects/27th/bg-desktop-en.jpg",
+        es: "/projects/27th/bg-desktop-es.jpg",
+        pt: "/projects/27th/bg-desktop-pt.jpg",
+        fr: "/projects/27th/bg-desktop-fr.jpg",
+      },
+    },
+    card: {
+      en: "/projects/27th/card-en.jpg",
+      es: "/projects/27th/card-es.jpg",
+      pt: "/projects/27th/card-pt.jpg",
+      fr: "/projects/27th/card-fr.jpg",
+    },
   },
 ];
+
+function getLocalizedImage(images: LocaleImages, locale: string) {
+  return images[locale as keyof LocaleImages] ?? images[FALLBACK_LOCALE];
+}
 
 const SWIPE_THRESHOLD = 40;
 
 export function Projects() {
   const t = useTranslations("Projects");
+  const locale = useLocale();
   const [active, setActive] = useState(0);
   const total = projects.length;
   const touchStartX = useRef<number | null>(null);
@@ -67,21 +186,35 @@ export function Projects() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Fondo del proyecto activo */}
+      {/* Fondo del proyecto activo: una capa mobile y una desktop por proyecto,
+          alternadas con Tailwind (sm:hidden / hidden sm:block), cada una
+          resuelta según el idioma activo con getLocalizedImage(). */}
       <div className="absolute inset-0">
         {projects.map((p, i) => (
-          <Image
-            key={p.name}
-            src={p.image}
-            alt={`Proyecto ${p.name}`}
-            fill
-            priority={i === 0}
-            sizes="100vw"
+          <div
+            key={`${p.key}-bg-wrap-${locale}`}
             className={cn(
-              "object-cover transition-opacity duration-700 ease-out",
+              "absolute inset-0 transition-opacity duration-700 ease-out",
               i === active ? "opacity-100" : "opacity-0",
             )}
-          />
+          >
+            <Image
+              src={getLocalizedImage(p.bg.mobile, locale)}
+              alt={`Proyecto ${p.name}`}
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              className="object-cover sm:hidden"
+            />
+            <Image
+              src={getLocalizedImage(p.bg.desktop, locale)}
+              alt={`Proyecto ${p.name}`}
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              className="hidden object-cover sm:block"
+            />
+          </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1E1E1E] via-[#1E1E1E]/20 to-[#1E1E1E]/70" />
       </div>
@@ -118,12 +251,12 @@ export function Projects() {
           </div>
         </Reveal>
 
-        {/* Tira de tarjetas */}
+        {/* Tira de tarjetas: usa la imagen "card", independiente del fondo */}
         <Reveal delay={150} from="right">
           <div className="projects-strip mt-10 sm:mt-14 flex items-end gap-3 sm:gap-5 overflow-x-auto pb-2">
             {projects.map((p, i) => (
               <button
-                key={p.name}
+                key={`${p.key}-card-${locale}`}
                 type="button"
                 onClick={() => setActive(i)}
                 aria-label={`Ver ${p.name}`}
@@ -131,17 +264,18 @@ export function Projects() {
                 className={cn(
                   "group relative shrink-0 overflow-hidden rounded-2xl border transition-all duration-500 ease-out",
                   i === active
-                    ? "h-48 w-32 border-primary sm:h-64 sm:w-44"
-                    : "h-40 w-28 border-white/10 opacity-70 hover:opacity-100 active:opacity-100 sm:h-52 sm:w-36",
+                    ? "h-48 w-auto border-primary sm:h-64"
+                    : "h-40 w-auto border-white/10 opacity-70 hover:opacity-100 active:opacity-100 sm:h-52",
                 )}
                 style={{ scrollSnapAlign: "start" }}
               >
                 <Image
-                  src={p.image}
+                  src={getLocalizedImage(p.card, locale)}
                   alt={`Proyecto ${p.name}`}
-                  fill
+                  width={400}
+                  height={520}
                   sizes="(max-width: 640px) 140px, 176px"
-                  className="object-cover"
+                  className="h-full w-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-2.5 sm:p-3 text-left">
